@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ option.name }}</h1>
+    <h4>{{ option.name }}</h4>
     <h1>{{ percent*100 + '%' }}</h1>
       <svg width="100" height="100" viewBox="0 0 32 32">
       <circle id="background"

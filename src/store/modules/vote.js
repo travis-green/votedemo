@@ -4,49 +4,41 @@ import shortid from 'shortid'
 const state = {
   options: [
     {
-      text: '鱼香肉丝',
-      id: 'we34s'
-    },
-    {
-      text: '宫保鸡丁',
-      id: 'res76'
+      text: '穿越到过去还是未来',
+      src: '../assets/qs1.png',
+      id: 'we35s'
     }
   ],
   votes: [
     {
-      voter: 'peter',
-      optionId: 'res76',
-      id: 'wes32'
-    },
-    {
-      voter: 'billie',
-      optionId: 'res76',
-      id: '432de'
+      voter: '',
+      optionId: '',
+      id: ''
     }
   ]
 }
 
 const mutations = {
-  addOption (state, data) {
+  addOption(state, data) {
     state.options.push(data)
   },
-  voteup (state, vote) {
+  voteup(state, vote) {
     state.votes.push(vote)
   },
-  undo (state, voteId) {
+  undo(state, voteId) {
     state.votes = state.votes.filter(t => t.id !== voteId)
   }
 }
 
 const actions = {
-  undo ({ commit }, { voteId }) {
-      commit('undo', voteId)
+  undo({ commit }, { voteId }) {
+    commit('undo', voteId)
   },
-  addOption ({ commit }, { text }) {
+  addOption({ commit }, { text }) {
     let id = shortid.generate()
     commit('addOption', { text, id })
   },
-  voteup ({ commit }, { vote } ) {
+  voteup({ commit }, { vote }) {
     let data = {
       ...vote,
       id: shortid.generate()

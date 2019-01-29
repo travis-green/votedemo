@@ -1,8 +1,8 @@
 <template>
-  <div class='new-option'>
+  <!-- <div class='new-option'>
     <input v-model="text" />
     <button @click="addOption">添加</button>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -45,9 +45,11 @@
   }
 
   button {
-    background-color: deeppink;
+    /* background-color: deeppink; */
     color: white;
+     border-bottom-left-radius: 13%;
+    border-top-right-radius: 13%;
     padding: 5px 10px;
-    border: 3px;
+    /* border: 3px; */
   }
 </style>

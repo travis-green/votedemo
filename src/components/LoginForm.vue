@@ -1,13 +1,6 @@
 <template>
   <div class='login-form'>
-    <div v-if="!isAuthenticated">
-      你是
-      <input v-model="username" />
-      <button @click="login" >保存</button>
-    </div>
-    <div v-else>
-      我是 {{ currentUser }}
-    </div>
+    <img class="logoimg" src="../assets/logo.png"></img>
   </div>
 </template>
 
@@ -38,9 +31,14 @@
 </script>
 
 <style scoped>
+ .logoimg {
+   width: 14rem;
+   height: auto;
+   padding-top: 2rem;
+ }
   .login-form {
-    background-color: #fff;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+    /* background-color: #fff; */
+    /* box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8); */
     font-size: 20px;
     text-align: center;
     line-height: 1.8;
@@ -55,9 +53,11 @@
   }
 
   button {
-    background-color: deeppink;
+    /* background-color: deeppink; */
     color: white;
+     border-bottom-left-radius: 13%;
+    border-top-right-radius: 13%;
     padding: 5px 10px;
-    border: 3px;
+    /* border: 3px; */
   }
 </style>
