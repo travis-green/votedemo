@@ -2,3 +2,4 @@
 年会投票系统
 #Vue-blu 
 UI框架
+# vote
